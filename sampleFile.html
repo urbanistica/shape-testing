@@ -9,11 +9,11 @@
 		var opacity = 1;
 		
 		if (events["fadeIn"][0] == true) {
-			opacity = parseInt(idx) / (events["fadeIn"][1] + startIdx)
+			opacity = parseInt(idx) - startIdx / events["fadeIn"][1]
 		}
 		return "tick happened " + idx + " " + opacity;
 	}
-	var startIdx = null;
+	var startIdx;
 	
 	var events = {
 		"fadeIn" : [true, 20],
