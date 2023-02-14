@@ -3,7 +3,22 @@
 <title>Sample Text</title>
 <script>
 	function tick(idx) {
-		return "tick happened " + idx;
+		if startIdx == null {
+			startIdx = parseInt(idx)
+		}
+		var opacity = 1;
+		
+		if (events["fadeIn"][0] == true) {
+			opacity = parseInt(idx) / (events["fadeIn"][1] + startIdx)
+		}
+		return "tick happened " + idx + " " + opacity;
+	}
+	var startIdx = null;
+	
+	var events = {
+		"fadeIn" : [true, 20],
+		"fadeOut" : [true, 20, 80],
+		"opacity" : 1.0
 	}
 </script>
 <style>
