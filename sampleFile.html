@@ -4,7 +4,8 @@
 <script>
 	
 	function tick(idx) {
-		if (events == null) {
+		if (startIdx == null) {
+			startIdx = idx
 			return "beep"
 		}
 		return "boop";
