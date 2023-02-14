@@ -3,14 +3,14 @@
 <title>Sample Text</title>
 <script>
 	function tick(idx) {
-		if startIdx == undefined {
+		if startIdx == null {
 			//startIdx = parseInt(idx)
 		}
-		//var opacity = 1;
+		var opacity = 1;
 		
 		if (events["fadeIn"][0] == true) {
-			return "fade in"
-			//opacity = parseInt(idx) - startIdx / events["fadeIn"][1]
+			//return "fade in"
+			opacity = {idx - startIdx) / events["fadeIn"][1]
 		}
 		return "tick happened " + idx + " " + opacity;
 	}
