@@ -4,13 +4,13 @@
 <script>
 	
 	function tick(idx) {
-		if (startIdx == null) {
+		if (startIdx == false) {
 			startIdx = idx
 			return "beep"
 		}
 		return "boop " + startIdx;
 	}
-	var startIdx = null;
+	var startIdx = false;
 	
 	var events = {
 		"fadeIn" : [true, 20],
