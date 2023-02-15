@@ -26,7 +26,10 @@
 		"fadeOut" : [true, 20, 80],
 		"initialOpacity" : 0.0
 	};
-	document.body.style.opacity = "" + events["initialOpacity"]
+	function setInitialOpacity() {
+		document.body.style.opacity = "" + events["initialOpacity"]
+	}
+	
 </script>
 <style>
 body {
@@ -42,7 +45,7 @@ body {
 }
 </style>
 </head>
-<body>
+<body onload="setInitialOpacity()">
 	<div class='basic'>
 <h3>This is a Test File</h3>
 <p>This is The First Line of Text.</p>
