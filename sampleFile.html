@@ -7,6 +7,7 @@
 		if (startIdx == false) {
 			startIdx = idx;
 			opacity = events["initialOpacity"];
+			document.body.style.opacity = "" + opacity
 			return "starting; opacity: " + opacity;
 		}
 		opFactor = idx - startIdx
@@ -15,15 +16,17 @@
 		document.body.style.opacity = "" + opacity;
 		return "updating; opacity:" + opacity;
 	}
+	
 	var startIdx = false;
 	var opacity = 0;
 	var opFactor = 0;
 	
 	var events = {
-		"fadeIn" : [true, 20],
+		"fadeIn" : [true, 10],
 		"fadeOut" : [true, 20, 80],
-		"initialOpacity" : 1.0
+		"initialOpacity" : 0.0
 	};
+	document.body.style.opacity = "" + events["initialOpacity"]
 </script>
 <style>
 body {
@@ -46,5 +49,8 @@ body {
 <p>This is the Second Line.</p>
 	</div>
 </body>
+<script>
+	document.body.style.opacity = "" + events["initialOpacity"]
+</script>
 
 </html>
