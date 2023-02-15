@@ -6,7 +6,7 @@
 	function tick(idx) {
 		if (startIdx == false) {
 			startIdx = idx;
-			opacity = 0;
+			opacity = events["initialOpacity"];
 			return "starting; opacity: " + opacity;
 		}
 		opFactor = idx - startIdx
@@ -21,7 +21,7 @@
 	var events = {
 		"fadeIn" : [true, 20],
 		"fadeOut" : [true, 20, 80],
-		"opacity" : 1.0
+		"initialOpacity" : 1.0
 	}
 </script>
 <style>
