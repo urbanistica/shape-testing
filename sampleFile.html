@@ -12,6 +12,7 @@
 		opFactor = idx - startIdx
 		opacity = opFactor / events["fadeIn"][1];
 		opacity = Math.min(1,Math.max(0,opacity));
+		document.body.style.opacity = "" + opacity;
 		return "updating; opacity:" + opacity;
 	}
 	var startIdx = false;
