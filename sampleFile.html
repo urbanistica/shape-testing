@@ -7,12 +7,12 @@
 		if (startIdx == false) {
 			startIdx = idx;
 			opacity = 0;
-			return "beep " + opacity
+			return "starting; opacity: " + opacity
 		}
 		opFactor = idx - startIdx
 		opacity = opFactor / events["fadeIn"][1]
 		opacity = Math.min(1,Math.max(0,opacity))
-		return "boop " + opacity + " " + opFactor + " " + events["fadeIn"][1]
+		return "updating; opacity:" + opacity
 	}
 	var startIdx = false;
 	var opacity = 0;
