@@ -11,6 +11,7 @@
 		}
 		opFactor = idx - startIdx
 		opacity = opFactor / events["fadeIn"][1]
+		opacity = Math.min(0,Math.max(1,opacity))
 		return "boop " + opacity + " " + opFactor + " " + events["fadeIn"][1]
 	}
 	var startIdx = false;
